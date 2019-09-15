@@ -1,0 +1,30 @@
+html{
+    background-color: #FDF6E3; 
+}
+
+.container {
+    display: grid; 
+    grid-gap: 20px; 
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 10vh 80vh 10vh; 
+    grid-template-areas: 
+        "navbar navbar"
+        "sidebar content"
+        "footer footer"
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.content{
+    grid-area: content; 
+}
+
+.footer{
+    grid-area: footer; 
+}

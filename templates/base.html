@@ -3,11 +3,18 @@
     <head>
         {% block head %}
         <title>{% block title %}{% endblock %} - Tomas Ortega</title>
-        <link rel="stylesheet" href="../assets/style.css"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
         {% endblock %} 
     </head>
     <body>
-        {% block body %}
-        {% endblock %}
+        <div class="container">
+            <div class="item navbar">Navegation bar</div>
+            <div class="item sidebar">Sidebar</div>
+            <div class="item content">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <div class="item footer">footer</div>
+        </div>
     </body>
 </html>
