@@ -1,3 +1,8 @@
-<html>
-    <h1>This is just a test</h1>
-</html>
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block head %} 
+    {{super()}}
+{% endblock %}  
+{% block body %}
+    <h1>Home Page</h1>
+{% endblock %}
