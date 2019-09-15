@@ -8,9 +8,14 @@
     </head>
     <body>
         <div class="container">
-            <div class="item navbar">Navegation bar</div>
-            <div class="item sidebar">Sidebar</div>
-            <div class="item content">
+            <div class="navbar">
+                <a href="/" class="name">Tomas Ortega</a>
+                <a class="nav-item" href="/projects">Projects</a>
+                <a class="nav-item" href="/resume">Resume</a>
+                <a class="nav-item" href="/contact">Contact</a>
+            </div>
+            <div class="item sidebar"></div>
+            <div class="content">
                 {% block body %}
                 {% endblock %}
             </div>

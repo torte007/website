@@ -5,7 +5,7 @@ html{
 .container {
     display: grid; 
     grid-gap: 20px; 
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 1fr 10fr;
     grid-template-rows: 10vh 80vh 10vh; 
     grid-template-areas: 
         "navbar navbar"
@@ -15,6 +15,9 @@ html{
 
 .navbar{
     grid-area: navbar;
+    display: grid; 
+    grid-template-columns: 350px 90px 90px 90px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 }
 
 .sidebar{
@@ -27,4 +30,33 @@ html{
 
 .footer{
     grid-area: footer; 
+}
+.item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.name{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; 
+    grid-row: 1 / -1; 
+}
+
+.nav-item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    vertical-align: bottom; 
+    font-size: 20px; 
+    grid-row: 4 / 6; 
+}
+
+a{
+    color: black; 
+    text-decoration: none; 
 }
