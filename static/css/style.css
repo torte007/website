@@ -5,12 +5,20 @@ html{
 .container {
     display: grid; 
     grid-gap: 20px; 
-    grid-template-columns: 1fr 10fr;
-    grid-template-rows: 10vh 80vh 10vh; 
+    grid-template-columns: 10fr;
+    grid-template-rows: 10px 10vh minmax(100vh, auto) 10vh; 
     grid-template-areas: 
-        "navbar navbar"
-        "sidebar content"
-        "footer footer"
+        "top"
+        "navbar"
+        "content"
+        "footer"
+}
+
+.content-container{
+    display: grid; 
+    grid-template-columns: 2fr 4fr 2fr; 
+    grid-template-rows: 35px auto auto 150px; 
+    justify-items: center; 
 }
 
 .navbar{
@@ -39,6 +47,20 @@ html{
     font-size: 35px;
 }
 
+.item.footer {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    font-size: 15px;
+}
+.item.intro{
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    grid-column: 2;
+    grid-row: 3; 
+}
+
 .name{
     display: grid;
     justify-content: center;
@@ -59,4 +81,32 @@ html{
 a{
     color: black; 
     text-decoration: none; 
+}
+
+.title{
+    justify-self: end; 
+    grid-row: 2; 
+}
+
+.profile-pic{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    grid-column: 2;
+    grid-row: 2 / 3; 
+    border: 5px solid white; 
+}
+
+.projects{
+    display: grid; 
+    grid-column: 2; 
+    grid-row: 3; 
+    justify-self: start; 
+}
+
+.resume{
+    display: grid; 
+    grid-column: 2;
+    grid-row: 3; 
+    justify-self: start; 
 }

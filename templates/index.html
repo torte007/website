@@ -4,5 +4,10 @@
     {{super()}}
 {% endblock %}  
 {% block body %}
-    <h1>Home Page</h1>
+    <div class="content-container">
+        <img class="profile-pic" src="{{url_for('static', filename='images/profile_picture2.jpeg')}}">
+        <p class="item intro">Hello! I'm Tomas, a computer scientist based on Miami, FL who enjoys building websites, games and tools for solving problems. <br/>
+            I also like to cook, watch movies, and I'm currently very interested on film production and special effects. 
+        </p>
+    </div>
 {% endblock %}

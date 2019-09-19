@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Projects {% endblock %}
+{% block head %} 
+    {{super()}}
+{% endblock %}  
+{% block body %}
+    <div class="content-container">
+        <h1 class="title">Resume</h1>
+        <a class="resume" href="{{ url_for('static', filename='TomasOrtegaResume.pdf') }}" download="TomasOrtegaResume.pdf">Download</a>
+    </div>
+{% endblock %}

@@ -1,3 +1,4 @@
+import json 
 from flask import Flask, render_template
 app = Flask(__name__)
 
@@ -11,8 +12,18 @@ def contact():
 
 @app.route('/projects')
 def projects():
-    return render_template("projects.html")
+    # We need to read the json file and pass the list to the template
+    with open('projects.json', 'r') as f: 
+        projects = json.load(f) 
+    return render_template("projects.html", projects=projects)
 
+@app.route('/resume')
+def resume():
+    return render_template("resume.html")
+
+@app.route('/Drumrack')
+def drumrack():
+    return render_template("drumrack.html")
 
 if __name__ == "__main__":
     app.run(port=5050, debug=True)

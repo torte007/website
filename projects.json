@@ -1,0 +1,59 @@
+[
+    {
+        "title": "GeekText (Online book store)",
+        "description": "This was a project for our software engineering course. We applied several software engenieering methodologies such as scrum and kanban to plan and orginize the project. To implement the project we decided to use React.JS for the client aplication and for the server we decided to build a RESTful API using flask and MySQL for the database where we stored information about the books.",
+        "links": {  
+            "github": "https://github.com/torte007/GeekText"
+     }
+    },
+    {
+        "title": "Bacon Number Generator",
+        "description": "A program that calculates the bacon number of any actor. The bacon number is calculated by finding the distance between the actor Kevin Bacon and the given actor. We decided to use Graph algorithms in java to find the degrees of separation between actors.",
+        "links": {  
+            "github": "https://github.com/torte007/BaconNumberGenerator"
+        }
+    },
+    {
+        "title": "Drum Machine",
+        "description": "A drum machine that lets you play drum sounds in the browser. The main purpose behind this app was to practice javascript and css to make a responsive web app.",
+        "links": {  
+            "github": "https://github.com/torte007/DrumMachine",
+            "Try it out!" : "/Drumrack"
+        }
+    },
+    {
+        "title": "Alien Invasion",
+        "description": "A game made with PyGame. This is the frist game that I created using this framework. I wanted to learn more about making games and also practice object oriented programming in python.",
+        "links": {  
+            "github": "https://github.com/torte007/alien_invasion"
+        }
+    },
+    {
+        "title": "Game Theory Best Response Generator",
+        "description": "The program allows a user to play a random or custom game where he can set the payoffs of each player and then observe where are the nash equilibria with pure or mixed strategies adn where are the Best Responses if the players use a pure strategy. The user can also set his beliefs or request random beliefs to explore different outcomes",
+        "links": {  
+            "github": "https://github.com/torte007/GameTheory"
+        }
+    },
+    {
+        "title": "Data Science Workflow Manager",
+        "description": "the goal of this project is to automate and provide the appropriate support for some of the data science tasks. a typical data science workflow will follow essential stages involving data cleaning, exploration, analysis, then finally presentation and visualization of results.",
+        "links": {  
+            "github": "https://github.com/torte007/datascienceworkflowmanager"
+        }
+    },
+    {
+        "title": "HTTP Server",
+        "description": "A server implemented from scratch with python. ",
+        "links": {  
+            "github": "https://github.com/torte007/HTTP-Server"
+        }
+    },
+    {
+        "title": "T-shell (Basic Shell in C)",
+        "description": "This project demonstrates the basics of how a shell works, reading, forking, exec, etc. Currently, the shell does not support the command cd but I/O redirection and pipes are incorporated to the shell.",
+        "links": {  
+            "github": "https://github.com/torte007/T-shell"
+        }
+    }
+]

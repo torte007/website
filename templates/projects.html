@@ -4,5 +4,19 @@
     {{super()}}
 {% endblock %}  
 {% block body %}
-    <h1>This is the project page</h1>
+    <div class="content-container">
+        <h1 class="title">Projects</h1>
+        <ul class="projects">
+            {% for project in projects %}
+                <li class="Project">
+                    <div>
+                        <h3>{{project.title}}</h3>
+                        <p>{{project.description}}</p>
+                        {% for name, link in project.links.items() %}
+                            <a href="{{link}}">{{name}}</a>
+                        {% endfor %} 
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
