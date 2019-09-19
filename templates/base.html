@@ -4,12 +4,13 @@
         {% block head %}
         <title>{% block title %}{% endblock %} - Tomas Ortega</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
+        <link href="https://fonts.googleapis.com/css?family=Alegreya|Vollkorn|Lato&display=swap" rel="stylesheet"> 
         {% endblock %} 
     </head>
     <body>
         <div class="container">
             <div class="navbar">
-                <a href="/" class="name">Tomas Ortega</a>
+                <a href="/" id="name">Tomas Ortega</a>
                 <a class="nav-item" href="/projects">Projects</a>
                 <a class="nav-item" href="/resume">Resume</a>
                 <a class="nav-item" href="/contact">Contact</a>

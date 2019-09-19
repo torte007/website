@@ -1,6 +1,6 @@
 html {
     font-size: 10px;
-    background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center; 
+    background: url(../images/crowd.jpg) bottom center; 
     background-size: cover; 
 }
 
@@ -10,15 +10,30 @@ body,html {
     font-family: sans-serif; 
 }
 
+.container{
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: 110px 20px auto;
+    grid-template-areas: 
+        "top top"
+        "top top"
+        "keys search";
+}
+
 .keys { 
-    display: flex; 
-    flex: 1; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, 100px); 
+    justify-items: center; 
+    grid-area: keys; 
+    /* flex: 1;  */
     min-height: 100vh; 
     align-items: center; 
     justify-content: center; 
 }
 
 .key { 
+    display: grid; 
     border: .4rem solid black; 
     border-radius: .5rem; 
     margin: 1rem; 

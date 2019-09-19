@@ -1,5 +1,18 @@
 html{
-    background-color: #FDF6E3; 
+    background-color: #fcf4de; 
+}
+
+h1, h2{
+    color: #474350; 
+    font-family: 'Vollkorn', serif;
+}
+
+h3{
+    color: #284b63; 
+}
+
+p{
+    font-family: 'Loton', sans-serif; 
 }
 
 .container {
@@ -16,16 +29,18 @@ html{
 
 .content-container{
     display: grid; 
-    grid-template-columns: 2fr 4fr 2fr; 
-    grid-template-rows: 35px auto auto 150px; 
+    grid-template-columns: 1.5fr 4fr 1fr; 
+    grid-template-rows: 70px auto auto 150px; 
     justify-items: center; 
 }
 
 .navbar{
     grid-area: navbar;
     display: grid; 
-    grid-template-columns: 350px 90px 90px 90px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: minmax(400px, auto) 1fr 1fr 1fr 5fr;
+    grid-template-rows: 40px 20px 10px; 
+    align-items: end; 
+    justify-items: end; 
 }
 
 .sidebar{
@@ -61,31 +76,32 @@ html{
     grid-row: 3; 
 }
 
-.name{
+#name{
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 50px; 
-    grid-row: 1 / -1; 
+    font-size: 60px; 
+    grid-row: 1/-1; 
+    color: #474350; 
+    font-family: 'Alegreya', serif;
+    font-weight: 1000; 
 }
 
 .nav-item{
     display: grid;
-    justify-content: center;
-    align-items: center;
-    vertical-align: bottom; 
-    font-size: 20px; 
-    grid-row: 4 / 6; 
+    font-size: 22px; 
+    grid-row: 2; 
+    justify-self: end;  
 }
 
 a{
-    color: black; 
+    color: #e98a15; 
     text-decoration: none; 
 }
 
 .title{
     justify-self: end; 
-    grid-row: 2; 
+    grid-row: 1; 
 }
 
 .profile-pic{
@@ -94,19 +110,34 @@ a{
     border-radius: 50%;
     grid-column: 2;
     grid-row: 2 / 3; 
-    border: 5px solid white; 
+    border: 5px solid #284b63; 
 }
 
 .projects{
     display: grid; 
     grid-column: 2; 
-    grid-row: 3; 
+    grid-row: 2; 
     justify-self: start; 
 }
 
 .resume{
     display: grid; 
     grid-column: 2;
-    grid-row: 3; 
+    grid-row: 4; 
+    justify-items: end; 
+    align-items: center; 
+    grid-template-columns: auto 1fr; 
     justify-self: start; 
+    align-self: flex-start; 
+}
+
+#resume-intro{
+    display: grid; 
+    grid-row: 2;
+    grid-column: 2; 
+    justify-self: start; 
+}
+
+li a{
+    color: #28ba9d; 
 }
