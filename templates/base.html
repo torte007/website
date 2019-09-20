@@ -2,15 +2,17 @@
 <html>
     <head>
         {% block head %}
+        <meta charset="utf-8">
         <title>{% block title %}{% endblock %} - Tomas Ortega</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> 
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Vollkorn|Lato&display=swap" rel="stylesheet"> 
+        <script type=text/javascript src="{{url_for('static', filename='scripts/jquery.js') }}"></script>
         {% endblock %} 
     </head>
     <body>
         <div class="container">
             <div class="navbar">
-                <a href="/" id="name">Tomas Ortega</a>
+                <a href="/" id="name">Tomás Ortega</a>
                 <a class="nav-item" href="/projects">Projects</a>
                 <a class="nav-item" href="/resume">Resume</a>
                 <a class="nav-item" href="/contact">Contact</a>
@@ -22,7 +24,5 @@
             </div>
             <div class="item footer"><footer>&copy; Copyright 2019 Tomas Ortega</footer></div>
         </div>
-        <script type=text/javascript src="{{
-            url_for('static', filename='jquery.js') }}"></script>
     </body>
 </html>

@@ -25,5 +25,9 @@ def resume():
 def drumrack():
     return render_template("drumrack.html")
 
+@app.route("/games")
+def games():
+    return render_template("game.html")
+
 if __name__ == "__main__":
     app.run(port=5050, debug=True)

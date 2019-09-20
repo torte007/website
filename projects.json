@@ -53,7 +53,8 @@
         "title": "Alien Invasion",
         "description": "A game made with PyGame. This is the frist game that I created using this framework. I wanted to learn more about making games and also practice object oriented programming in python.",
         "links": {  
-            "github": "https://github.com/torte007/alien_invasion"
+            "github": "https://github.com/torte007/alien_invasion",
+            "Try it out!" : "/games"
         }
     }
 ]

@@ -6,5 +6,31 @@
 {% block body %}
     <div class="content-container">
         <h1 class="title">Contact Info</h1>
+        <div class="my-list">
+            <div>
+                <a class="contact-link" href="{{link}}">
+                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
+                    Linked-in
+                </a>
+            </div>
+            <div>
+                <a class="contact-link" href="{{link}}">
+                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
+                    Github
+                </a>
+            </div>
+            <div>
+                <a class="contact-link" href="{{link}}">
+                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
+                    Email
+                </a>
+            </div>
+            <div>
+                <a class="contact-link" href="{{link}}">
+                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
+                    Phone
+                </a>
+            </div>
+        </div>
     </div>
 {% endblock %}
