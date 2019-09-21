@@ -1,16 +1,22 @@
 import json 
+import os
 from flask_mail import Mail, Message
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 app = Flask(__name__)
 
-with open("info.json", "r") as f:
-    info = json.load(f)
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+projects_file = os.path.join(THIS_FOLDER, 'projects.json') 
+info = os.path.join(THIS_FOLDER, 'info.json')
 
-app.config['SECRET_KEY'] = info['secretKey']
+with open(info, 'r') as f:
+    info_dict = json.load(f)
+
+
+app.config['SECRET_KEY'] = info_dict['secretKey']
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = info['email']
-app.config['MAIL_PASSWORD'] = info['password']
+app.config['MAIL_USERNAME'] = info_dict['email']
+app.config['MAIL_PASSWORD'] = info_dict['password']
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -38,7 +44,7 @@ def contact():
 @app.route('/projects')
 def projects():
     # We need to read the json file and pass the list to the template
-    with open('projects.json', 'r') as f: 
+    with open(projects_file, 'r') as f: 
         projects = json.load(f) 
     return render_template("projects.html", projects=projects)
 

@@ -1,4 +1,4 @@
 venv/
 .vscode/
 my-venv/
-info.json
+static/info.json
