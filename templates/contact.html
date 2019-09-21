@@ -6,30 +6,53 @@
 {% block body %}
     <div class="content-container">
         <h1 class="title">Contact Info</h1>
-        <div class="my-list">
-            <div>
-                <a class="contact-link" href="{{link}}">
-                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
-                    Linked-in
-                </a>
+        <div class="contact">
+            <div class="my-list">
+                <div>
+                    <a class="contact-link grow" href="{{link}}">
+                        <img src="{{url_for('static', filename='images/icons/LinkedIn.png')}}">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+                <div>
+                    <a class="contact-link grow" href="{{link}}">
+                        <img src="{{url_for('static', filename='images/icons/github.png')}}">
+                        <p>Github</p>
+                    </a>
+                </div>
+                <div>
+                    <a class="contact-link grow" href="{{link}}">
+                        <img src="{{url_for('static', filename='images/icons/mail.png')}}">
+                        <p>Email</p>
+                    </a>
+                </div>
+                <div>
+                    <a class="contact-link grow" href="{{link}}">
+                        <img src="{{url_for('static', filename='images/icons/phone.png')}}">
+                        <p>(305) 988-7211</p>
+                    </a>
+                </div>
             </div>
-            <div>
-                <a class="contact-link" href="{{link}}">
-                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
-                    Github
-                </a>
-            </div>
-            <div>
-                <a class="contact-link" href="{{link}}">
-                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
-                    Email
-                </a>
-            </div>
-            <div>
-                <a class="contact-link" href="{{link}}">
-                    <img src="{{url_for('static', filename='assets/github-icon.png')}}">
-                    Phone
-                </a>
+            <div class="contact-message">
+                <h2 id="contact-title">Get in contact!</h2>
+                {% if form == True%}
+                    <form action="" method="POST">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                        <label for="mail">Email Address</label>
+                        <input type="text" id="mail" name="email" placeholder="Your email address..">
+                
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write a message.." style="height:200px"></textarea>
+                        <input class="grow" id="submit" type="submit" value="Send">
+                    </form>
+                {% else %}  
+                    <p style="justify-self: center; font-size: 30px;">Thanks! I will get back to you soon.</p>
+                {% endif %}
             </div>
         </div>
     </div>
