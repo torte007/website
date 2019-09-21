@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 projects_file = os.path.join(THIS_FOLDER, 'projects.json') 
-info = os.path.join(THIS_FOLDER, 'info.json')
+info = os.path.join(THIS_FOLDER, '../info.json')
 
 with open(info, 'r') as f:
     info_dict = json.load(f)
