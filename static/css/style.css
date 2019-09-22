@@ -453,4 +453,9 @@ label{
     .navbar{
         grid-template-columns: minmax(395px, auto) repeat(3, minmax(90px, 1fr)) 5fr;
     }
+
+    .contact-me-button{
+        justify-self: center;
+    }
+
 }
