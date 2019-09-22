@@ -444,6 +444,7 @@ label{
     }
     .nav-item{
         font-size: 20px; 
+        justify-self: center; 
     }
     .name#name{
         font-size: 60px;
@@ -456,6 +457,7 @@ label{
 
     .contact-me-button{
         justify-self: center;
+        margin: 0;
     }
 
 }
